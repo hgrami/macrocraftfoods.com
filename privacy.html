@@ -76,9 +76,13 @@ weight-and-steps connection and for body composition, and refusing either leaves
 <tr><td><code>HKQuantityTypeIdentifierHeight</code></td><td>resting energy estimate (optional)</td></tr>
 <tr><td><code>HKCharacteristicTypeIdentifierDateOfBirth</code></td><td>age for the resting energy estimate, offered as a profile prefill</td></tr>
 <tr><td><code>HKCharacteristicTypeIdentifierBiologicalSex</code></td><td>resting energy estimate, offered as a profile prefill</td></tr>
+<tr><td><code>HKQuantityTypeIdentifierDietaryEnergyConsumed</code></td><td>what other apps logged as eaten, read once when you import your history (never synced)</td></tr>
+<tr><td><code>HKQuantityTypeIdentifierDietaryProtein</code></td><td>protein other apps logged, read once when you import your history (never synced)</td></tr>
+<tr><td><code>HKQuantityTypeIdentifierDietaryCarbohydrates</code></td><td>carbohydrate other apps logged, read once when you import your history (never synced)</td></tr>
+<tr><td><code>HKQuantityTypeIdentifierDietaryFatTotal</code></td><td>fat other apps logged, read once when you import your history (never synced)</td></tr>
 </tbody></table></div>
 
-<p><strong>On Android, MacroCraft asks to read:</strong> <code>Weight</code>, <code>Steps</code>, <code>BodyFat</code>, <code>LeanBodyMass</code>, <code>Height</code>, and
+<p><strong>On Android, MacroCraft asks to read:</strong> <code>Weight</code>, <code>Steps</code>, <code>BodyFat</code>, <code>LeanBodyMass</code>, <code>Height</code>, <code>Nutrition</code> (once, for the history import), and
 <code>ReadHealthDataHistory</code> — the last because Health Connect otherwise serves an ordinary read permission only
 about thirty days back, and the energy estimate reads a year of weight history. Refusing it is supported: the
 app then reads the window it is allowed.</p>
@@ -154,6 +158,7 @@ list, with what each is for:</p>
 <tr><td><code>android.permission.health.READ_LEAN_BODY_MASS</code></td><td>reading lean mass, if you allow it</td></tr>
 <tr><td><code>android.permission.health.READ_HEIGHT</code></td><td>reading your height, if you allow it</td></tr>
 <tr><td><code>android.permission.health.READ_HEALTH_DATA_HISTORY</code></td><td>reading further back than the thirty days Health Connect otherwise allows</td></tr>
+<tr><td><code>android.permission.health.READ_NUTRITION</code></td><td>reading what other apps logged as eaten, once, when you choose to import your history</td></tr>
 <tr><td><code>android.permission.health.WRITE_NUTRITION</code></td><td>writing the nutrition you log back to Health Connect</td></tr>
 <tr><td><code>com.google.android.apps.aicore.service.BIND_SERVICE</code></td><td>talking to Android's own on-device AI service, on a device that has one, when you use Describe or read a label. It arrives with the ML Kit library. Nothing is sent anywhere: the model runs on your phone</td></tr>
 </tbody></table></div>
