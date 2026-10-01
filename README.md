@@ -1,2 +1,4 @@
 # macrocraft.com
-macrocraft.com — published copy of macrocraft-v2/web/public. Do not edit here.
+
+The published copy of `web/public` in the private MacroCraft repository. **Do not edit here** — every file is
+replaced by `npm run web:publish` there.

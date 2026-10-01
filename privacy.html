@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; img-src 'self'; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<title>MacroCraft privacy policy · MacroCraft</title>
+<meta name="description" content="What MacroCraft stores, what reaches the internet, and what never leaves your phone.">
+<link rel="canonical" href="https://www.macrocraft.com/privacy">
+<meta property="og:title" content="MacroCraft privacy policy · MacroCraft">
+<meta property="og:description" content="What MacroCraft stores, what reaches the internet, and what never leaves your phone.">
+<meta property="og:image" content="https://www.macrocraft.com/img/og.png">
+<meta property="og:url" content="https://www.macrocraft.com/privacy">
+<meta name="theme-color" content="#0B1B3D">
+<link rel="icon" href="/img/icon-192.png">
+<link rel="apple-touch-icon" href="/img/icon-192.png">
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<header class="site">
+  <a class="brand" href="/"><img src="/img/icon-192.png" alt="" width="32" height="32"><span>MacroCraft</span></a>
+  <nav><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/support">Support</a></nav>
+</header>
+<main>
+<article class="doc">
+<h1>MacroCraft privacy policy</h1>
+
+<p><strong>Last updated:</strong> 1 October 2026<br>
+<strong>Contact:</strong> support@macrocraft.com</p>
+
+<h2>The short version</h2>
+
+<p>MacroCraft has no account, no app server and no analytics. Your food log, your weigh-ins and everything derived
+from them are stored on your phone, encrypted, and are not sent anywhere. Three things reach the internet, all
+of them narrow, and two of them only when you ask: a barcode lookup, a recipe page you paste, and a check for
+an app update. Nothing about your health is part of any of them.</p>
+
+<p>We — the developer of MacroCraft — cannot see your data. There is nowhere for it to arrive.</p>
+
+<h2>What MacroCraft stores on your phone</h2>
+
+<p>All of it lives in one encrypted database. The key is generated on your device, kept in the system keychain,
+and never leaves it.</p>
+
+<div class="table"><table>
+<thead><tr><th>What</th><th>Detail</th></tr></thead>
+<tbody>
+<tr><td>Food and drink you log</td><td>Items, amounts, times, and a frozen nutrition snapshot per entry.</td></tr>
+<tr><td>Weigh-ins and trend weight</td><td>Each reading, its source, and the smoothed trend derived from them.</td></tr>
+<tr><td>Body fat, fat mass and lean mass</td><td>Readings you enter or that come from a health app, with the instrument each came from.</td></tr>
+<tr><td>Daily step counts</td><td>Read from a health app to inform the energy estimate.</td></tr>
+<tr><td>Sex, date of birth, height and usual activity</td><td>Used to estimate resting energy before the app has learned from your own data.</td></tr>
+<tr><td>Goals, programs and weekly check-ins</td><td>Target weight, rate, calorie and macro targets, and what each check-in decided.</td></tr>
+<tr><td>Your recipes and your own foods</td><td>Names, ingredients, portions, barcodes you scanned.</td></tr>
+<tr><td>History you import from another tracker</td><td>Whatever that export contained: days, entries, weigh-ins, goals.</td></tr>
+<tr><td>Settings</td><td>Units, Strict Offline, the Progress arrangement, and which permission sheets you have seen.</td></tr>
+</tbody></table></div>
+
+<p>MacroCraft does not ask for your name, your email address or your phone number, and has nowhere to put them.</p>
+
+<h2>Your health app</h2>
+
+<p>MacroCraft can read from and write to Apple Health or Health Connect. You are asked separately for the
+weight-and-steps connection and for body composition, and refusing either leaves the rest of the app working.</p>
+
+<p><strong>On iPhone, MacroCraft asks to read:</strong></p>
+
+<div class="table"><table>
+<thead><tr><th>Type</th><th>Why</th></tr></thead>
+<tbody>
+<tr><td><code>HKQuantityTypeIdentifierBodyMass</code></td><td>weigh-ins, which drive the trend and the whole estimate</td></tr>
+<tr><td><code>HKQuantityTypeIdentifierStepCount</code></td><td>daily activity, which informs the energy estimate</td></tr>
+<tr><td><code>HKQuantityTypeIdentifierBodyFatPercentage</code></td><td>energy density for the expenditure estimate (optional)</td></tr>
+<tr><td><code>HKQuantityTypeIdentifierLeanBodyMass</code></td><td>energy density for the expenditure estimate (optional)</td></tr>
+<tr><td><code>HKQuantityTypeIdentifierHeight</code></td><td>resting energy estimate (optional)</td></tr>
+<tr><td><code>HKCharacteristicTypeIdentifierDateOfBirth</code></td><td>age for the resting energy estimate, offered as a profile prefill</td></tr>
+<tr><td><code>HKCharacteristicTypeIdentifierBiologicalSex</code></td><td>resting energy estimate, offered as a profile prefill</td></tr>
+</tbody></table></div>
+
+<p><strong>On Android, MacroCraft asks to read:</strong> <code>Weight</code>, <code>Steps</code>, <code>BodyFat</code>, <code>LeanBodyMass</code>, <code>Height</code>, and
+<code>ReadHealthDataHistory</code> — the last because Health Connect otherwise serves an ordinary read permission only
+about thirty days back, and the energy estimate reads a year of weight history. Refusing it is supported: the
+app then reads the window it is allowed.</p>
+
+<p><strong>MacroCraft writes one thing:</strong> the nutrition you log, so it appears alongside your other health data. On
+Android that is the <code>Nutrition</code> record type. It never writes your weight, your steps, your body composition,
+or anything you imported from another tracker.</p>
+
+<p>Health data read from your health app is used only inside MacroCraft, to show you your own history and to
+estimate your energy expenditure. It is never used for advertising, for marketing, or for any purpose other
+than the health and fitness features you are using it for, and it is never sold, shared or transmitted.</p>
+
+<p>MacroCraft deletes a record in your health app only if MacroCraft created it. Removing the app's own nutrition
+entries is offered when you reset the app, and it is optional.</p>
+
+<h2>What reaches the internet</h2>
+
+<p>Three things, and nothing else. There is no analytics SDK, no crash reporter and no advertising identifier.</p>
+
+<p><strong><code>world.openfoodfacts.org</code></strong> — when you scan a barcode MacroCraft does not already know, it asks Open Food
+Facts about that barcode. The request necessarily reveals the barcode and your IP address to that service.
+The answer is cached on your phone so the same product is never looked up twice. Turning on <strong>Strict Offline</strong>
+in Settings stops this entirely.</p>
+
+<p><strong>A web address you type</strong> — if you paste a recipe URL and ask MacroCraft to read it, MacroCraft fetches that
+page from the site you chose. Nothing about you is added to the request beyond what any browser sends.
+<strong>Strict Offline</strong> stops this too.</p>
+
+<p><strong><code>u.expo.dev</code></strong> — a release build checks for an app update on launch. That request carries the app's runtime
+version, platform and release channel, and necessarily your IP address. It carries no personal data and no
+identifier of you.</p>
+
+<p>Your food, your weights, your body composition, your goals and your profile are part of none of these
+requests.</p>
+
+<p>One more thing is worth naming, because it leaves the app even though MacroCraft does not make the request: the
+licences on the <strong>About and licences</strong> screen are links. Tapping one hands the address — for example
+<code>opendatacommons.org</code> — to your browser, and from then on it is an ordinary web page visit that MacroCraft has
+no part in.</p>
+
+<h2>Permissions on iPhone</h2>
+
+<p>iOS asks at the moment a feature needs each one, and explains why in the system prompt. MacroCraft asks for
+four:</p>
+
+<div class="table"><table>
+<thead><tr><th>What it asks for</th><th>When</th></tr></thead>
+<tbody>
+<tr><td>permission to read from Apple Health</td><td>when you connect a health app, and again if you ask for the body-composition prefill</td></tr>
+<tr><td>permission to write to Apple Health</td><td>when you connect a health app</td></tr>
+<tr><td>the camera, to scan a barcode or photograph a label</td><td>when you open the scanner or take a label photo</td></tr>
+<tr><td>a photo you have already taken</td><td>when you choose an existing photo of a label instead of taking one</td></tr>
+</tbody></table></div>
+
+<p>MacroCraft asks for <strong>no microphone access, no location access and no contacts access</strong> on either platform.</p>
+
+<h2>Permissions on Android</h2>
+
+<p>Android grants some permissions at install and asks for others when a feature needs them. MacroCraft's full
+list, with what each is for:</p>
+
+<div class="table"><table>
+<thead><tr><th>Permission</th><th>What it is for</th></tr></thead>
+<tbody>
+<tr><td><code>android.permission.CAMERA</code></td><td>scanning a barcode, or photographing a nutrition label</td></tr>
+<tr><td><code>android.permission.INTERNET</code></td><td>the three destinations above and nothing else</td></tr>
+<tr><td><code>android.permission.VIBRATE</code></td><td>the small taps that confirm an action</td></tr>
+<tr><td><code>android.permission.READ_EXTERNAL_STORAGE</code></td><td>choosing an existing photo of a label, on Android 12 and older. Android 13 and newer use the system photo picker, which needs no permission</td></tr>
+<tr><td><code>android.permission.WRITE_EXTERNAL_STORAGE</code></td><td>nothing MacroCraft does. It arrives with a library, applies only to Android 12 and older, and MacroCraft writes only inside its own private storage</td></tr>
+<tr><td><code>android.permission.health.READ_WEIGHT</code></td><td>reading your weigh-ins from Health Connect</td></tr>
+<tr><td><code>android.permission.health.READ_STEPS</code></td><td>reading your daily step counts</td></tr>
+<tr><td><code>android.permission.health.READ_BODY_FAT</code></td><td>reading body fat, if you allow it</td></tr>
+<tr><td><code>android.permission.health.READ_LEAN_BODY_MASS</code></td><td>reading lean mass, if you allow it</td></tr>
+<tr><td><code>android.permission.health.READ_HEIGHT</code></td><td>reading your height, if you allow it</td></tr>
+<tr><td><code>android.permission.health.READ_HEALTH_DATA_HISTORY</code></td><td>reading further back than the thirty days Health Connect otherwise allows</td></tr>
+<tr><td><code>android.permission.health.WRITE_NUTRITION</code></td><td>writing the nutrition you log back to Health Connect</td></tr>
+<tr><td><code>com.google.android.apps.aicore.service.BIND_SERVICE</code></td><td>talking to Android's own on-device AI service, on a device that has one, when you use Describe or read a label. It arrives with the ML Kit library. Nothing is sent anywhere: the model runs on your phone</td></tr>
+</tbody></table></div>
+
+<p>MacroCraft asks for <strong>no microphone access and no location access</strong>. Two permissions that libraries would
+otherwise have added — <code>android.permission.RECORD_AUDIO</code> and <code>android.permission.SYSTEM_ALERT_WINDOW</code> — are
+deliberately removed from the build, because MacroCraft has no feature that uses either.</p>
+
+<h2>Artificial intelligence</h2>
+
+<p>MacroCraft's &quot;describe a meal&quot; and label-reading features run entirely on your device, using the model built
+into the operating system. Nothing you photograph or type is sent to an AI service, and MacroCraft never falls
+back to one. Where a device has no such model, the app uses a plain text parser instead and says so.</p>
+
+<h2>Backups</h2>
+
+<p>MacroCraft excludes its database, its journals and its internal files from <strong>iCloud backup</strong> and from Android
+<strong>cloud Auto Backup and device-to-device transfer</strong>. That is deliberate: no personal health data reaches a
+cloud backup by default.</p>
+
+<p>If you want a copy, you create it yourself, and you decide where it goes:</p>
+
+<div class="table"><table>
+<thead><tr><th>File</th><th>Encrypted</th><th>What is in it</th></tr></thead>
+<tbody>
+<tr><td>Portable backup (.mcbackup)</td><td>AES-256-GCM, keyed from a recovery key only you hold</td><td>everything stored on the device except this device's own bookkeeping about a health store</td></tr>
+<tr><td>CSV and JSON export</td><td>no — plain text</td><td>the tables you chose, or in JSON everything the CSVs hold plus recipes, goals and your profile</td></tr>
+<tr><td>Diagnostics bundle</td><td>no — plain text</td><td>versions, states and row counts. No food, no weights, no names, nothing you typed</td></tr>
+</tbody></table></div>
+
+<p>The recovery key for a backup is shown once and is stored nowhere — not on your device and not by us. If you
+lose it, that backup cannot be opened by anybody, including us. A CSV or JSON export is <strong>plain text</strong>: treat
+it the way you would treat any document about your health.</p>
+
+<h2>Deleting your data</h2>
+
+<p>Deleting the app removes the database and its key with it. Inside the app, <strong>Reset app data</strong> deletes the
+database, the local safety snapshots, any files waiting to be shared and the encryption key, and offers to
+remove the nutrition entries MacroCraft wrote to your health app. Your own backup files are wherever you put
+them and are not touched.</p>
+
+<h2>Children</h2>
+
+<p>MacroCraft is not directed at children and does not knowingly hold data about anyone under 13.</p>
+
+<h2>Not medical advice</h2>
+
+<p>MacroCraft is nutrition and weight-management software. Its calorie and macronutrient targets, safety floors and
+rate limits are guardrails in a piece of software, not medical advice, and it does not diagnose, treat or
+prevent anything. Talk to a qualified professional about your own situation.</p>
+
+<h2>Where the food data comes from</h2>
+
+<p>MacroCraft ships a generic food database built from public sources, and credits them in the app under <strong>About
+and licences</strong>:</p>
+
+<ul>
+  <li><strong>Health Canada — Canadian Nutrient File</strong>, under the Open Government Licence – Canada.</li>
+  <li><strong>USDA FoodData Central</strong>, released under CC0 1.0.</li>
+  <li><strong>Open Food Facts</strong>, whose database is ODbL 1.0, whose contents are DbCL and whose text is CC BY-SA 3.0. MacroCraft queries it for barcodes and caches individual products locally; it does not redistribute the database.</li>
+</ul>
+
+<h2>This website</h2>
+
+<p>This page and the rest of macrocraft.com are static files hosted on GitHub Pages. They run no scripts, set no
+cookies and carry no analytics. GitHub, as the host, receives your IP address with each request and may keep
+it in its logs, as its own privacy statement describes. Nothing you do on this website reaches the app.</p>
+
+<h2>Changes</h2>
+
+<p>If this policy changes in a way that affects what MacroCraft does with your data, the updated version will be
+published here with a new date before the change ships.</p>
+</article>
+</main>
+<footer class="site">
+  <p>© 2026 MacroCraft · <a href="/privacy">Privacy</a> · <a href="/terms">Terms</a> · <a href="/support">Support</a></p>
+  <p>Nutrition and weight-management software, not medical advice.</p>
+</footer>
+</body>
+</html>
