@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://www.macrocraft.com/sitemap.xml
+Sitemap: https://www.macrocraftfoods.com/sitemap.xml
